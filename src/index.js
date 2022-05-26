@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from "react-dom/client";
+import { App } from './container/App/App'
 
 const Header = () => <h1>Hello App.js</h1>;
 
-function AppList() {
+/*function AppList() {
     return (
         <ul>
             <li>list item 1</li>
@@ -20,7 +21,9 @@ function App() {
             <AppList />
         </>
     );
-}
+}*/
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
