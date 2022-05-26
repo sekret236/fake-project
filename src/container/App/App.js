@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const App = () => {
+default const App = () => {
     return (
         <>
             <h1>App.js</h1>
