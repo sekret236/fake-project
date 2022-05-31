@@ -1,11 +1,16 @@
+import { Footer } from 'container/Footer/Footer';
+import { Header } from 'container/Header/Header';
+import { Main } from 'container/Main/Main';
 import React from 'react';
 
-const App = () => {
+
+export const App = () => {
     return (
         <>
-            <h1>App.js</h1>
+            <Header/>
+            <Main/>
+            <Footer/>
         </>
     )
 }
 
-export default App
