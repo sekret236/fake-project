@@ -2,6 +2,7 @@ import React from 'react'
 import { Typography } from '@mui/material'
 import { Grid } from '@mui/material'
 import { ProductListItem } from './ProductListItem'
+import productsArray from 'utils/productsArray'
 
 export const ProductsList = () => {
     return (
@@ -10,7 +11,7 @@ export const ProductsList = () => {
                 variant="h4"
                 align="center"
                 style={{
-                    margin: "30px 0",
+                    margin: '30px 0',
                     textTransform: 'uppercase',
                 }}
             >
@@ -24,17 +25,18 @@ export const ProductsList = () => {
                 justifyContent="center"
                 alignItems="center"
             >
-                <Grid item xs={12} sm={6} md={4}>
-                    <ProductListItem />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <ProductListItem />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <ProductListItem />
-                </Grid>
+                {productsArray.map((product) => (
+                    <Grid item xs={12} sm={6} md={4}>
+                        <ProductListItem
+                            name={product.name}
+                            description={product.description}
+                            type={product.type}
+                            capacity={product.capacity}
+                            price={product.price}
+                        />
+                    </Grid>
+                ))}
             </Grid>
-
         </>
     )
 }
