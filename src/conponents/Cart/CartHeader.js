@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './CartHeader.scss'
+import './CartHeader.scss'
 
 export const CartHeader = () => {
     return (
